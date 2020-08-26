@@ -1,0 +1,1849 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Conv_calibri',Sans-Serif;
+    font-weight: normal;
+}
+
+.Wrapper {
+    margin: 0 auto;
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    border: none;
+    outline: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #000000;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #000000;
+}
+
+.disable-div {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.Header {
+    background: url(../images/header.jpg) no-repeat left top;
+    height: 526px;
+}
+
+    .Header ul {
+        width: 340px;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 135px;
+        float: right;
+        margin-right: 40px;
+    }
+
+        .Header ul li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 0 12px;
+        }
+
+.mandatory {
+    color: red !important;
+}
+
+.Login {
+    background: url(../images/login/login_black_fibre_bg.png);
+    height: 100vh;
+    width: 100%;
+}
+
+.LoginLeftSec {
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    background: url(../images/login/gold_yes_warrantee_yes_guarantee.png) no-repeat left top;
+    background-size: contain;
+    height: 8vh;
+}
+
+    .LoginLeftSec ul {
+        list-style: none;
+        margin: 0px;
+        padding-top: 50px;
+    }
+
+        .LoginLeftSec ul li {
+            list-style-type: none;
+            padding: 10px 0px;
+        }
+
+.LoginRightSec {
+    width: 75%;
+    display: inline-block;
+    vertical-align: top;
+    background: url(../images/Avery-Weight-Tronix-Logo-login.png) no-repeat right top;
+    background-size: contain;
+    height: 6.5vh;
+}
+
+.ConatctIcons {
+    margin: 0px;
+    padding: 80px 0 0 0px;
+}
+
+    .ConatctIcons ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        width: 200px;
+        float: right;
+    }
+
+        .ConatctIcons ul li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+.ConatctIcons1 {
+    margin: 0px;
+    padding: 0 0 0 0px;
+}
+
+    .ConatctIcons1 ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0 7px;
+    }
+
+.ConatctIcons2 {
+    margin: 0px 90px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    float: right;
+    width: 930px;
+    text-align: right;
+}
+
+    .ConatctIcons2 ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        float: right;
+        position: relative;
+        width: 426px;
+    }
+
+        .ConatctIcons2 ul li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 0px 7px;
+        }
+
+.LoginSec {
+    width: 815px;
+    padding: 29px 27px;
+    background: url(../images/login_steel_plate_bg.png) no-repeat;
+    height: 196px;
+    margin-top: 50vh;
+    left: 12px;
+    vertical-align: top;
+}
+
+.loginLeft {
+    width: 49%;
+    display: inline-block;
+    padding: 20px 0 10px 0px;
+    vertical-align: top;
+}
+
+    .loginLeft span {
+        display: block;
+        padding: 3px 0px;
+    }
+
+.forgetpass {
+    display: block;
+    padding: 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+    .forgetpass a {
+        color: #000000;
+    }
+
+.login {
+    text-align: center;
+    width: 100%;
+}
+
+lable {
+    display: inline-block;
+    width: 80px;
+    font-family: 'Conv_calibri',Sans-Serif;
+    text-align: right;
+    padding-right: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 1px #808080 solid;
+    max-width: 75%;
+    width: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: 'Conv_calibri',Sans-Serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+.WeighMain {
+    background: url(../images/Weigh_black_fibre_bg.png) no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.WeightHeader {
+    width: 100%;
+    display: flex;
+}
+
+.One {
+    width: 50%;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.LeftOne {
+    width: 87px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.RightOne {
+    width: 189px;
+    display: inline-block;
+}
+
+.Two {
+    margin: 0px;
+    display: inline-block;
+    color: #4f4f4f;
+    font-size: 15px;
+    vertical-align: top;
+    position: absolute;
+    right: 65%;
+    top: 2vh;
+}
+
+    .Two input {
+        border: none;
+        outline: none;
+        font-weight: bold;
+        padding: 2px 10px 3px 10px;
+        color: #000000;
+    }
+
+    .Two table {
+        margin-top: 3px;
+    }
+
+.Three {
+    width: 25%;
+    display: inline-block;
+    padding-top: 10px;
+    vertical-align: top;
+}
+
+    .Three table {
+        max-width: 55% !important;
+    }
+
+    .Three td {
+        padding: .5vh 1%;
+    }
+
+.Four {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.TopRLogo {
+    width: 100%;
+    vertical-align: top;
+    padding-left: 0px;
+    float: right;
+    text-align: right;
+}
+
+
+
+.MiddleSection {
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+    max-width: 100%;
+}
+
+.LeftSec {
+    width: 187px;
+    display: inline-block;
+}
+
+    .LeftSec ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+        .LeftSec ul li {
+            padding: 5px 0;
+            margin: 0px;
+            list-style-type: none;
+        }
+
+            .LeftSec ul li:first-child {
+                padding-top: 0px;
+            }
+
+    .LeftSec span {
+        display: block;
+        margin-left: -20px;
+        margin-top: 162px;
+        width: 100%;
+    }
+
+.RightSec {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px #ea000b solid;
+    background: #a6a6a6;
+    margin: 0px;
+    padding: 0 0 0px 0px;
+    vertical-align: top;
+    background-image: linear-gradient(to bottom, #f4f4f4, #a6a6a6);
+    background: url(../images/main_steel_bg_1px.png) repeat-x;
+    display: flex;
+}
+
+.MiddleSection .RightSec {
+    display: block;
+}
+
+/* #f4f4f4  c5c5c5 */
+.RightInn1 {
+    display: inline-block;
+    width: 487px;
+    vertical-align: top;
+    padding: 0px;
+}
+
+    .RightInn1 h4 {
+        background: #e3010f;
+        padding: 10px;
+        color: #ffffff;
+        width: 276px;
+        margin: 0px;
+        padding: 5px 10px;
+        height: 20px;
+    }
+
+.RightInn2 {
+    display: inline-block;
+    width: 304px;
+    vertical-align: top;
+    margin: 0px;
+    padding: 0px;
+}
+
+.RightInn3 {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0px;
+}
+
+.RightInn1 table {
+    margin: 15px 0px;
+    /*height: 583px;*/
+}
+
+.field {
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 4px 0px 4px 15px;
+    width: 266px;
+}
+
+.field-175px {
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 4px 0px 4px 15px;
+    width: 175px;
+}
+
+.FilddHalf {
+    width: 77px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 4px 0px 4px 15px
+}
+
+.SmallField {
+    width: 50px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 4px 0px 4px 15px
+}
+
+.SmallField2 {
+    width: 65px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 4px 0px 4px 15px
+}
+
+.SmallFieldRight {
+    width: 50px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 4px 0px 4px 25px
+}
+
+.FilddHalf1 {
+    width: 130px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 4px 0px 4px 0px
+}
+
+.FilddHalf70 {
+    width: 70px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 4px 0px 4px 0px
+}
+
+.field2 {
+    border: 1px #fe0000 solid !important;
+    outline: none !important;
+    font-weight: bold !important;
+    padding: 4px 10px !important;
+    color: #000000 !important;
+    margin: 4px 0px 4px 15px !important;
+    width: 176px !important;
+    text-align: center !important;
+    font-size: 24px !important;
+    background-color: white !important;
+    text-decoration: none;
+    display: block;
+}
+
+.field3 {
+    border: 1px #e70009 solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 6px 0px 6px 15px;
+    width: 100%;
+}
+
+.RightInn2 {
+    background: url(../images/steel_plate_bg_screen.png) no-repeat left top;
+    height: 461px;
+    margin: 12px 0 0 20px;
+    padding: 50px 0px;
+}
+
+.field1 {
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 6px 0px 6px 15px;
+    width: 90px;
+    font-size: 16px;
+}
+
+.field13 {
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 6px 0px 6px 15px;
+    width: 170px;
+    font-size: 14px;
+}
+
+.field14 {
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 6px 0px 6px 15px;
+    width: 50px;
+    font-size: 14px;
+}
+
+.blck {
+    background: #000000;
+    color: #ffffff;
+}
+
+
+.RightInn3 {
+    overflow-y: auto;
+    height: 65vh;
+    padding-top: 12px;
+}
+
+    .RightInn3 img {
+        margin: 10px 5px;
+        overflow: auto;
+        height: 500px;
+        width: 270px;
+        height: 168px;
+    }
+
+    .RightInn3 span {
+        display: block;
+        margin-bottom: 6px;
+    }
+
+/*.RightInn311{ overflow-y:scroll; height:558px; padding-top:12px;}
+.RightInn311 img{ margin:10px 5px; overflow:auto ; height:500px; width:270px; height:168px;}
+.RightInn311 span{ display:block; margin-bottom:6px;}*/
+
+
+.RightInnS3 {
+    overflow-y: scroll;
+    height: 558px;
+    width: 540px;
+    padding-top: 12px;
+}
+
+    .RightInnS3 img {
+        margin: 10px 5px;
+        overflow: auto;
+        height: 500px;
+        width: 270px;
+        height: 168px;
+    }
+
+    .RightInnS3 span {
+        display: block;
+        margin-bottom: 6px;
+    }
+
+.footer {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+    .footer ul {
+        margin: 0px;
+        padding: 2px 0 0 305px;
+        width: 937px;
+        height: 77px;
+    }
+
+        .footer ul li {
+            list-style-type: none;
+            display: inline-block;
+            padding: 0 25px;
+        }
+
+.selected {
+    margin-top: -4px !important;
+}
+
+.WagonLeftSection {
+    display: inline-block;
+    width: 816px;
+    vertical-align: top;
+    padding: 0px;
+}
+
+    .WagonLeftSection h4 {
+        background: #e3010f;
+        padding: 10px;
+        color: #ffffff;
+        width: 170px;
+        margin: 0px;
+        padding: 4px 10px;
+    }
+
+    .WagonLeftSection table {
+        margin: 5px 20px 7px 20px;
+        padding: 0px;
+    }
+
+.MainLTable td {
+    padding: 4px 0px;
+}
+
+.WagonLeftSection span {
+    display: block;
+    padding: 0 0 0 20px;
+}
+
+.FilddHalf21 {
+    width: 77px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 4px 10px;
+    color: #000000;
+    margin: 4px 0px 4px 0px
+}
+
+/*Page No 3*/
+.RightInn22 {
+    background: url(../images/steel_plate_bg_search_screen.png) no-repeat left top;
+    height: 554px;
+    margin: 8px 0 0 8px;
+    padding: 0px 10px;
+    float: left;
+}
+
+    .RightInn22 span {
+        color: #4d4d4d;
+    }
+
+.RightInn33 {
+    height: 554px;
+    margin: 7px 0 0 8px;
+    padding: 0px;
+    float: left;
+    position: relative;
+}
+
+    .RightInn33 table {
+        margin: 0px 0 0 0px;
+        padding: 0px 0px;
+    }
+
+.RightInnMasters {
+    height: 515px;
+    margin: 40px 0 0 45px;
+    padding: 0px;
+    float: left;
+    position: relative;
+}
+
+    .RightInnMasters table {
+        padding: 0px 0px;
+        margin-left: 0px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+.MastersPageMasterDiv {
+    width: 1120px;
+    height: 554px;
+    margin: 7px 0 0 8px;
+    padding: 0px;
+    float: left;
+    position: relative;
+    overflow-y: auto;
+}
+
+.MastersPageContent {
+    background: url(../images/masters_plate_bg.png) no-repeat left top;
+    float: left;
+    position: relative;
+    height: 536px;
+    width: 196px;
+    margin-left: 20px;
+}
+
+    .MastersPageContent h5 {
+        text-align: center;
+        color: #ffffff;
+        width: 176px;
+        margin: 0px;
+        padding: 10px 10px 17px 10px;
+        font-size: 16px;
+    }
+
+    .MastersPageContent ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        width: 144px;
+        position: relative;
+    }
+
+        .MastersPageContent ul li {
+            list-style-type: none;
+            padding: 19px 26px 0px 26px;
+        }
+
+.TableDiv {
+    background-color: #fff;
+    color: #4d4d4d;
+    border: 1px #6aa6bc solid;
+    padding: 10px;
+    width: 394px;
+    font-size: 14px;
+}
+
+.FilddHalf11 {
+    width: 265px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 3px 10px;
+    color: #000000;
+    margin: 1px 0px;
+    border-radius: 2px;
+}
+
+.FilddHalf112 {
+    width: 265px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: #000000;
+    margin: 1px 0px;
+    border-radius: 2px;
+}
+
+.FilddHalf1121 {
+    width: 85px;
+    display: inline-block;
+    border: 1px #6aa6bc solid;
+    outline: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: #000000;
+    margin: 1px 0px;
+    border-radius: 2px;
+}
+
+.RightInn11 {
+    display: inline-block;
+    width: 1128px;
+    vertical-align: top;
+    padding: 0px;
+    overflow-y: auto;
+}
+
+    .RightInn11 h4 {
+        background: #e3010f;
+        padding: 10px;
+        color: #ffffff;
+        width: 170px;
+        margin: 0px;
+        padding: 5px 10px;
+        float: left;
+    }
+
+.SupplierSearch {
+    background: #fff !important;
+    padding: 10px;
+    color: #000 !important;
+    width: 150px !important;
+    margin: 0px;
+    padding: 5px 10px;
+}
+
+.SupplierSearchBig {
+    background: #fff !important;
+    color: #000 !important;
+    width: 98% !important;
+    margin: 0px;
+    padding: 0px 0px 0px 10px !important;
+    height: 28px !important;
+}
+
+.Popup {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    background: #c5c5c5;
+    background-image: linear-gradient(to right, #c5c5c5, #f4f4f4);
+}
+
+.PopupDiv {
+    border: 1px #6aa6bc solid;
+    color: #4d4d4d;
+    font-size: 14px;
+    width: 100%
+}
+
+.PopupHeader {
+    background-color: #000;
+}
+
+.Popupcontener {
+    background-color: #d5d5d5;
+}
+
+.RLeftSec {
+    background: url(../images/steel_plate_bg_search_screen.png) no-repeat left top;
+    width: 300px;
+    height: 561px;
+}
+
+.DropDown {
+    color: #000;
+    margin: 0px 0px 0px 15px;
+    padding: 8px 10px;
+    border: 1px #6aa6bc solid;
+    font-weight: bold;
+}
+
+.Close {
+    cursor: pointer;
+}
+
+.CloseButtonA {
+    padding: 2px !important;
+    margin: 0px 0px 0px 0px !important;
+    float: right;
+}
+
+.RightOne img {
+    max-width: 250px;
+    max-height: 83px;
+    margin-top: 15px;
+}
+
+.form-control:focus {
+    border-color: darkslategray;
+    box-shadow: 1px 1px 1px rgba(0, 7, 11, 0.97) inset, 4px 5px 9px rgba(19, 5, 9, 0.98);
+    border: 2px solid black;
+}
+
+select:focus {
+    border-color: darkslategray;
+    box-shadow: 1px 1px 1px rgba(0, 7, 11, 0.97) inset, 4px 5px 9px rgba(19, 5, 9, 0.98);
+    border: 2px solid black;
+}
+
+/*
+
+@media screen and (min-width: 800px) { 
+
+    body {
+       
+        height: auto;
+        margin: auto;
+    }
+}
+*/
+/*
+ @media screen and (max-width: 800px) {
+    body {
+      
+        height: auto;
+        margin: auto;
+    }
+    body {
+        overflow-y: auto;
+        overflow-y: auto;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Wrapper {
+        margin: 0 auto;
+        padding: 0px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .LoginSec {
+        width: 300px;
+        padding: 29px 27px;
+        background: url(../images/login_steel_plate_bg.png) no-repeat;
+        height: 196px;
+        margin-top: 320px;
+        margin-left: 12px;
+        vertical-align: top;
+    }
+}
+
+    @media only screen and (max-width: 768px) {
+        .Wrapper {
+            margin: 0 auto;
+            padding: 0px;
+            width: 768px;
+            margin: 0 auto;
+        }
+
+        .LoginSec {
+            width: 300px;
+            padding: 29px 27px;
+            background: url(../images/login_steel_plate_bg.png) no-repeat;
+            height: 196px;
+            margin-top: 320px;
+            margin-left: 12px;
+            vertical-align: top;
+        }
+    }
+
+        @media only screen and (max-width: 1366px) {
+            .Wrapper {
+                margin: 0 auto;
+                padding: 0px;
+                width: 1366px;
+                margin: 0 auto;
+            }
+
+            .LoginSec {
+                width: 500px;
+                padding: 29px 27px;
+                background: url(../images/login_steel_plate_bg.png) no-repeat;
+                height: 196px;
+                margin-top: 300px;
+                margin-left: 12px;
+                vertical-align: top;
+            }
+
+            /*Page No 3*/
+}
+
+
+@media all and (max-width:1500px) {
+    .Wrapper {
+        max-width: 100%;
+        position: relative;
+        top: 0px;
+        display: flex;
+    }
+
+    .LoginSec {
+        width: 91%
+    }
+}
+
+
+.MiddleSection .RightInn11 {
+    width: 100%;
+}
+
+.margin45 {
+    margin-left: 16px;
+}
+
+.height25 {
+    height: 2.5vh;
+}
+
+.fontbold {
+    font-weight: bolder !important;
+    color: #000 !important;
+}
+
+.Three table td div input {
+    padding: 0;
+}
+
+.Three table td:nth-child(3) {
+    padding-top: 5px;
+}
+
+    .Three table td:nth-child(3) div input {
+        padding-top: 3px;
+    }
+
+.textSearch {
+    width: 75%;
+    margin-top: 12px;
+    float: right
+}
+
+
+
+.WeightHeader .LeftOne img {
+    position: absolute;
+    width: 3%;
+    height: 9vh;
+}
+
+.RightOne img {
+    position: absolute;
+    max-width: 13%;
+    max-height: 6vh;
+    margin-top: 0px;
+    width: 13%;
+    height: 6vh;
+    object-fit: contain;
+    left: 5%;
+    top: 1vh;
+}
+
+
+.LeftSec ul li:nth-child(1) a img {
+    position: absolute;
+    left: 1%;
+    width: 9.5%;
+    height: 5vh;
+    top: 20vh;
+}
+
+.LeftSec ul li:nth-child(2) a img {
+    position: absolute;
+    left: 1%;
+    width: 9.5%;
+    height: 5vh;
+    top: 26vh;
+}
+
+
+.LeftSec ul li:nth-child(3) a img {
+    position: absolute;
+    left: 1%;
+    width: 9.5%;
+    height: 5vh;
+    top: 32vh;
+}
+
+
+.LeftSec ul li:nth-child(4) a img {
+    position: absolute;
+    left: 1%;
+    width: 9.5%;
+    height: 5vh;
+    top: 38vh;
+}
+
+
+.LeftSec ul li:nth-child(5) a img {
+    position: absolute;
+    left: 1%;
+    width: 9.5%;
+    height: 5vh;
+    top: 44vh;
+}
+
+.LeftSec ul li:nth-child(6) a img {
+    position: absolute;
+    left: 1%;
+    width: 9.5%;
+    height: 5vh;
+    top: 50vh;
+}
+
+
+
+.LeftSec span img {
+    width: 15.5%;
+    height: 16vh;
+    position: absolute;
+    top: 66vh;
+    left: 1px;
+}
+
+.TopRLogo img {
+    position: absolute;
+    top: 1vh;
+    right: 1%;
+    width: 13%;
+    height: 6vh;
+    object-fit: contain;
+}
+
+.ConatctIcons1 ul li:nth-child(1) a img {
+    position: absolute;
+    right: 80%;
+    width: 25%;
+    height: 4vh;
+    top: 5vh;
+    object-fit: contain;
+}
+
+.ConatctIcons1 ul li:nth-child(2) a img {
+    position: absolute;
+    right: 50%;
+    width: 25%;
+    height: 4vh;
+    top: 5vh;
+    object-fit: contain;
+}
+
+
+.ConatctIcons1 ul li:nth-child(3) a img {
+    position: absolute;
+    right: 20%;
+    width: 25%;
+    height: 4vh;
+    top: 5vh;
+    object-fit: contain;
+}
+
+.footer ul li:nth-child(1) a img {
+    position: absolute;
+    left: 24%;
+    width: 6%;
+    height: 6vh;
+    bottom: 1.5vh;
+    object-fit: contain;
+}
+
+.footer ul li:nth-child(2) a img {
+    position: absolute;
+    left: 32%;
+    width: 6%;
+    height: 6vh;
+    bottom: 1.5vh;
+    object-fit: contain;
+}
+
+.footer ul li:nth-child(3) a img {
+    position: absolute;
+    left: 40%;
+    width: 6%;
+    height: 6vh;
+    bottom: 1.5vh;
+    object-fit: contain;
+}
+
+.footer ul li:nth-child(4) a img {
+    position: absolute;
+    left: 48%;
+    width: 6%;
+    height: 6vh;
+    bottom: 1.5vh;
+    object-fit: contain;
+}
+
+.footer ul li:nth-child(5) a img {
+    position: absolute;
+    left: 56%;
+    width: 6%;
+    height: 6vh;
+    bottom: 1.5vh;
+    object-fit: contain;
+}
+
+.footer ul li:nth-child(6) a img {
+    position: absolute;
+    left: 64%;
+    width: 6%;
+    height: 6vh;
+    bottom: 1.5vh;
+    object-fit: contain;
+}
+
+.footer ul li:nth-child(7) a img {
+    position: absolute;
+    left: 72%;
+    width: 6%;
+    height: 6vh;
+    bottom: 1.5vh;
+    object-fit: contain;
+}
+
+.MiddleSection .RightSec {
+    position: absolute;
+    display: block;
+    top: 20vh;
+    left: 15%;
+    width: 80%;
+    height: 68vh;
+    background-size: contain;
+    overflow: auto;
+}
+
+.ConatctIcons1 {
+    width: 10%;
+    position: absolute;
+    margin: 0px;
+    padding: 0 0 0 0px;
+    right: 3%;
+    top: 4vh;
+}
+
+.LoginSec {
+    background: url(../images/login_steel_plate_bg.png) no-repeat;
+    background-size: contain;
+    vertical-align: top;
+    width: 47% !important;
+    height: 25vh;
+    position: absolute;
+    left: 25%;
+    top: 8vh;
+    overflow: auto;
+    padding: 1.6% 1.5% !important;
+}
+
+.Three table td div input {
+    height: 2vh !important;
+    padding: 0;
+    width: 70% !important;
+    object-fit: contain;
+}
+
+
+.loginLeft input {
+    width: 55%;
+}
+
+
+.loginLeft lable {
+    width: 25%;
+}
+
+
+@media (min-width: 1281px) and (max-width: 1300px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .Login {
+        background-size: contain;
+        max-width: 100%;
+        top: 0;
+        transform: scale(1);
+    }
+
+    .Wrapper {
+        display: flex;
+    }
+
+    .LoginLeftSec {
+        flex-basis: 20%;
+    }
+
+    .LoginRightSec {
+        flex-basis: 80%;
+    }
+
+    .loginimagesmain img {
+        width: 80px;
+    }
+
+    .LoginSec {
+        background-size: contain;
+        width: 100%;
+        margin-top: 270px;
+        padding: 0px 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .loginLeft {
+        flex-basis: 30%;
+        flex-wrap: wrap;
+        display: flex;
+        margin: 0px 1%;
+    }
+
+    .RightInn11.textcon {
+        width: 150px;
+        overflow-x: hidden;
+    }
+
+    .RightInnMasters .MainLTable {
+        width: 830px !important;
+        overflow-x: auto;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .Login {
+        background-size: cover;
+        max-width: 100%;
+    }
+
+    .Three table td div input {
+        height: 15px !important;
+        width: 20px !important;
+    }
+
+
+    .Three td {
+        font-size: 11px;
+    }
+
+    .Wrapper {
+        display: flex;
+        left: 0;
+    }
+
+    .LoginLeftSec {
+        flex-basis: 20%;
+    }
+
+    .LoginRightSec {
+        flex-basis: 80%;
+    }
+
+
+    .loginimagesmain img {
+        width: 50px;
+        height: auto;
+    }
+
+
+
+    .Wrapper .login {
+        margin-top: 0px;
+        flex-basis: 80%;
+    }
+
+    .WeighMain {
+        flex-wrap: wrap;
+        max-width: 100%;
+        transform: scale(1);
+        top: 0;
+        background-size: cover;
+        background-position-x: right;
+    }
+
+
+    .footer ul {
+        margin: 0px;
+        padding: 2px 0 0 305px;
+        width: 65%;
+        height: 77px;
+    }
+
+
+    .Two table {
+        font-size: 10px;
+    }
+
+    .One .LeftOne {
+        flex-basis: 50%;
+        width: auto;
+    }
+
+    .One .RightOne {
+        flex-basis: 50%;
+        width: auto;
+    }
+
+
+    .MiddleSection {
+        display: flex;
+    }
+
+
+    .RightInn11 {
+        margin-top: 40px;
+    }
+
+        .RightInn11.textcon {
+            margin-top: 0px;
+            position: absolute;
+            top: 0;
+        }
+
+
+    .fileloc input {
+        max-width: 100%;
+        width: 200px !important;
+    }
+
+
+    .supplier td {
+        width: 160px;
+        text-align: left;
+    }
+
+    .supplier input {
+        width: 200px !important;
+        max-width: 80%;
+    }
+
+    .supplier .FilddHalf112 {
+        width: 200px !important;
+    }
+
+    .supplier .select2-container {
+        width: 200px !important;
+    }
+
+    .footer ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0 5px;
+    }
+
+    .LoginSec {
+        background: url(../images/login_steel_plate_bg.png) no-repeat;
+        background-size: contain;
+        vertical-align: top;
+        width: 50%;
+        height: 26vh;
+        position: absolute;
+        left: 25%;
+        top: 8vh;
+        overflow: auto;
+        padding: 2px 20px;
+    }
+
+    .loginLeft {
+        padding: 0px 0 0px 0px;
+    }
+}
+
+
+@media (min-width: 2500px) {
+    .LoginLeftSec ul li a img {
+        width: 93px;
+    }
+
+
+
+    .Login {
+        background-size: cover;
+    }
+
+    .Two table {
+        font-size: 18px;
+    }
+
+    .Three table td div input {
+        height: 32px !important;
+        width: 37px !important;
+    }
+
+    .Three td {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 2301px) and (max-width: 2500px) {
+    .LoginLeftSec ul li a img {
+        width: 93px;
+    }
+
+
+    .Login {
+        background-size: cover;
+    }
+
+    .Two table {
+        font-size: 17px;
+    }
+
+    .Three table td div input {
+        height: 30px !important;
+        width: 35px !important;
+    }
+
+    .Three td {
+        font-size: 19px;
+    }
+}
+
+
+@media (min-width: 2101px) and (max-width: 2300px) {
+    .LoginLeftSec ul li a img {
+        width: 93px;
+    }
+
+
+    .Login {
+        background-size: cover;
+    }
+
+    .Two table {
+        font-size: 16px;
+    }
+
+    .Three table td div input {
+        height: 29px !important;
+        width: 35px !important;
+    }
+
+
+    .Three td {
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 1921px) and (max-width: 2100px) {
+    .LoginLeftSec ul li a img {
+        width: 93px;
+    }
+
+
+    .Login {
+        background-size: cover;
+    }
+
+    .Two table {
+        font-size: 15px;
+    }
+
+    .Three table td div input {
+        height: 25px !important;
+        width: 30px !important;
+    }
+
+    .Three td {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1801px) and (max-width: 1920px) {
+    .RightSec {
+        width: 68%;
+    }
+
+    .RightInn1 {
+        display: inline-block;
+        width: 580px;
+        height: 68vh !important;
+    }
+
+    .MastersPageMasterDiv {
+        width: 1120px;
+        height: 540px;
+        overflow-x: auto;
+    }
+
+    .LoginLeftSec ul li a img {
+        width: 85px;
+    }
+
+    .Login {
+        background-size: cover;
+    }
+
+    .ConatctIcons1 ul {
+        top: 4vh;
+    }
+
+    .Two table {
+        font-size: 15px;
+    }
+
+    .Three table td div input {
+        height: 25px !important;
+        width: 30px !important;
+    }
+
+    .Three td {
+        font-size: 15px;
+    }
+
+
+    .loginLeft input {
+        width: 55%;
+    }
+
+
+    .loginLeft lable {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1601px) and (max-width: 1800px) {
+
+    .LoginLeftSec ul li a img {
+        width: 80px;
+    }
+
+    .Login {
+        background-size: cover;
+    }
+
+    .Two table {
+        font-size: 13px;
+    }
+
+    .Three table td div input {
+        height: 22px !important;
+        width: 28px !important;
+    }
+
+    .Three td {
+        font-size: 13px;
+    }
+}
+
+
+
+@media (min-width: 1501px) and (max-width: 1600px) {
+    .LoginLeftSec ul li a img {
+        width: 65px;
+    }
+
+
+    .Login {
+        background-size: cover;
+    }
+
+    .Two table {
+        font-size: 12px;
+    }
+
+    .LoginSec {
+        background: url(../images/login_steel_plate_bg.png) no-repeat;
+        background-size: contain;
+        vertical-align: top;
+        width: 47%;
+        height: 25vh;
+        position: absolute;
+        left: 25%;
+        top: 8vh;
+        overflow: auto;
+        padding: 15px 20px;
+    }
+
+    .Three table td div input {
+        height: 18px !important;
+        width: 28px !important;
+    }
+
+    .Three td {
+        font-size: 12px;
+    }
+}
+
+
+
+@media (min-width: 1301px) and (max-width: 1500px) {
+    .LoginLeftSec ul li a img {
+        width: 65px;
+    }
+
+
+
+    .RightInn1 {
+        height: 65vh !important;
+    }
+
+    .RightSec {
+        height: 65vh;
+    }
+
+    .RightInn3 {
+        display: none;
+    }
+
+    .RightInn2 {
+        height: 47vh;
+        overflow-y: scroll;
+    }
+
+    .MiddleSection {
+        height: 70vh;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+    .Login {
+        background-size: cover;
+    }
+
+
+    .Two table {
+        font-size: 11px;
+    }
+
+    .LoginSec {
+        background: url(../images/login_steel_plate_bg.png) no-repeat;
+        background-size: contain;
+        vertical-align: top;
+        width: 47%;
+        height: 25vh;
+        position: absolute;
+        left: 25%;
+        top: 8vh;
+        overflow: auto;
+        padding: 15px 20px;
+    }
+
+    .Three table td div input {
+        height: 25px !important;
+        width: 30px !important;
+    }
+
+    .Three td {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 105px) and (max-width: 1100px) {
+    .LoginLeftSec ul li a img {
+        width: 65px;
+    }
+
+
+    .RightSec {
+        height: 65vh;
+    }
+
+
+    .MiddleSection {
+        height: 70vh;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+    .Two table {
+        font-size: 10px;
+    }
+
+    .LoginSec {
+        background: url(../images/login_steel_plate_bg.png) no-repeat;
+        background-size: contain;
+        vertical-align: top;
+        width: 47%;
+        height: 25vh;
+        position: absolute;
+        left: 25%;
+        top: 8vh;
+        overflow: auto;
+        padding: 15px 20px;
+    }
+
+    .Three table td div input {
+        height: 10px !important;
+        width: 20px !important;
+    }
+
+
+    .Three td {
+        font-size: 10px;
+    }
+}
+
+
+
+.LoginLeftSec ul li:nth-child(1) a img {
+    width: 19%;
+    height: 10vh;
+    object-fit: contain;
+    position: absolute;
+    top: 10vh;
+    left: 4%;
+}
+
+.LoginLeftSec ul li:nth-child(2) a img {
+    width: 19%;
+    height: 10vh;
+    object-fit: contain;
+    position: absolute;
+    top: 23vh;
+    left: 4%;
+}
+
+.LoginLeftSec ul li:nth-child(3) a img {
+    width: 19%;
+    height: 10vh;
+    object-fit: contain;
+    position: absolute;
+    top: 36vh;
+    left: 4%;
+}
+
+.LoginLeftSec ul li:nth-child(4) a img {
+    width: 19%;
+    height: 10vh;
+    object-fit: contain;
+    position: absolute;
+    top: 49vh;
+    left: 4%;
+}
+
+.LoginLeftSec ul li:nth-child(5) a img {
+    width: 19%;
+    height: 10vh;
+    object-fit: contain;
+    position: absolute;
+    top: 61vh;
+    left: 4%;
+}
+
+.ConatctIcons ul li:nth-child(1) a img {
+    position: absolute;
+    width: 2%;
+    height: 4vh;
+    object-fit: contain;
+    right: 5%;
+    top: 9vh;
+}
+
+.ConatctIcons ul li:nth-child(2) a img {
+    position: absolute;
+    width: 2%;
+    height: 4vh;
+    object-fit: contain;
+    right: 2%;
+    top: 9vh;
+}
+
+.dashboardmidsec input[type="submit"] {
+    max-width: 100%;
+    width: 100%;
+}
+
+.Three td img {
+    width: 50% !important;
+    height: 2vh !important;
+    object-fit: contain;
+}

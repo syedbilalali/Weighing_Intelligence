@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WIWEB_AveryDB_New" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=70031worndw10\sqlexpress2008;Initial Catalog=WIWEB_AveryDB_New;Integrated Security=False;Persist Security Info=False;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AveryDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AlphaDisplayMaster" Member="AlphaDisplayMasters">
+    <Type Name="AlphaDisplayMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlantCodeId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AlphaDisplayIdentification" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AlphaDisplayIP" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AlphaDisplayPort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BarrierMaster" Member="BarrierMasters">
+    <Type Name="BarrierMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlantCodeId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BarrierIdentification" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BarrierIP" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BarrierPort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BarrierScheme" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CompanyMaster" Member="CompanyMasters">
+    <Type Name="CompanyMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CompanyLogo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CompanyAddress1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CompanyAddress2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactPerson" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactMobile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GSTNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PanNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactPerson" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactMobile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DataForSMS_EMAIL" Member="DataForSMS_EMAILs">
+    <Type Name="DataForSMS_EMAIL">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DataId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMail" Member="EMails">
+    <Type Name="EMail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NameOfPerson" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DataId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MachineWorkingParameters" Member="MachineWorkingParameters">
+    <Type Name="MachineWorkingParameter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlantCodeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MachineId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IPPort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PortNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ModeofComs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StabilityNos" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StabilityRange" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ZeroInterlock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZeroInterlockRange" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TransactionNoPrefix" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TareCheck" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoredTare" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MaterialClassification" Member="MaterialClassifications">
+    <Type Name="MaterialClassification">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaterialClassificationCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaterialClassificationDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Supplier_VendorCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PackingMaster" Member="PackingMasters">
+    <Type Name="PackingMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PackingCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PackingName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PackingUOM" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PackingWT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PasswordPolicy" Member="PasswordPolicies">
+    <Type Name="PasswordPolicy">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MinLength" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinNoOfCapitals" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinNoOfSmall" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinNoOfSpecials" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinNoOfNumeric" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShiftTiming" Member="ShiftTimings">
+    <Type Name="ShiftTiming">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NoOfShift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShiftName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ShifTimeFrom" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="ShiftTimeTo" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SMS" Member="SMs">
+    <Type Name="SM">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SMSNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DataId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SQLDatabase" Member="SQLDatabases">
+    <Type Name="SQLDatabase">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProviderName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ServerName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DatabaseName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BackupLocation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BackupInterval" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblGateEntryRecords" Member="tblGateEntryRecords">
+    <Type Name="tblGateEntryRecord">
+      <Column Name="GatePassNo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TruckNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SecurityName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SecurityMarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMaterial" Member="tblMaterials">
+    <Type Name="tblMaterial">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaterialCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaterialDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PackingCodeId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaterialClassificationCodeId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSensorMaster" Member="tblSensorMasters">
+    <Type Name="tblSensorMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlantCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SensorIdentification" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SensorIP" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SensorPort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSupplier" Member="tblSuppliers">
+    <Type Name="tblSupplier">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GSTNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PanNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactPerson" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactMobile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactEMail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTransporter" Member="tblTransporters">
+    <Type Name="tblTransporter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GSTNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PanNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactPerson" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactMobile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserMaster" Member="UserMasters">
+    <Type Name="UserMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Plantcode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WeighbridgeID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserWeightMachineMaster" Member="UserWeightMachineMasters">
+    <Type Name="UserWeightMachineMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeightMachineId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleClassification" Member="VehicleClassifications">
+    <Type Name="VehicleClassification">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClassificationCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Make" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NoOfAxies" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="BodyType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="KerbWt" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ManufactureYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GrossWeight" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="UOMWeight" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VisitDetails" Member="VisitDetails">
+    <Type Name="VisitDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VisitDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReasonOfVisit" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PartsReplaced" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OtherWorkDone" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PlantMaster" Member="PlantMasters">
+    <Type Name="PlantMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlantCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlantName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlantAddress1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlantAddress2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlantContactPerson" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactMobile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NoOfMachine" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CameraMaster" Member="CameraMasters">
+    <Type Name="CameraMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlantCodeID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CameraIndentification" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CameraIP" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CameraPort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CameraUserName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CameraPwd" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WeightMachineMaster" Member="WeightMachineMasters">
+    <Type Name="WeightMachineMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlantCodeId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Capacity" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WeighingUnit" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Resolution" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlatformSize" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Indicator" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LCType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NoOfLoadCells" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LoadCellSerialNos" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EquipmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="InvoiceNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DespatchDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InstallationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WarrentyUpto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReasonWarrentyUptoDate" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SiteParameterSettings" Member="SiteParameterSettings">
+    <Type Name="SiteParameterSetting">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsGateEntry" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cameras" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AlphaNumericDisplay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sensors" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Barriers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PASystem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RFIDReader" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConnectivityToCustomer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoSpectalCharacterForTruck" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AxleWeighting" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TMS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AuthorizedForTARE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ToleranceCheckforCustQty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ToleranceCheckforSupQty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WeightMachineId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlantCodeId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SHIFTTIME" Member="SHIFTTIMEs">
+    <Type Name="SHIFTTIME">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOOFSHIFTS" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="STA" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EDA" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="STB" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EDB" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="STC" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="EDC" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServiceMaster" Member="ServiceMasters">
+    <Type Name="ServiceMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AMCType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AMCContactNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AMCValidUpto" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AMCReminder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StampingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StampingReminder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Warrantee" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Garrantee" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TruckMaster" Member="TruckMasters">
+    <Type Name="TruckMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TruckRegNo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="ClassificationCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TransporterCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TransporterName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StoredTareWeight" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TareWtDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TareValidityDate" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AverageTareScheme" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CurrentAverageTareValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UOMWeight" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StoredTareDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TruckTareWeight" Member="TruckTareWeights">
+    <Type Name="TruckTareWeight">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TruckNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TareWeight" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TareWtDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AverageTareSchema" Member="AverageTareSchemas">
+    <Type Name="AverageTareSchema">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="weightvalue" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTransactionMaterials" Member="tblTransactionMaterials">
+    <Type Name="tblTransactionMaterial">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TransactionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaterialCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaterialName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CreteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DynamicFieldNames" Member="DynamicFieldNames">
+    <Type Name="DynamicFieldName">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlantId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FieldName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FieldValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsMandatory1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsMandatory2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsRequired" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblTransactions" Member="tblTransactions">
+    <Type Name="tblTransaction">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TripId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TripType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsMultiProduct" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GateEntryNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TruckNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaterialCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaterialName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaterialCalssificationCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaterialClassificationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SupplierCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SupplierName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TransporterCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TransporterName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PackingCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PackingName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PackingQty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChallanNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ChallanDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ChallanWeight" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PONo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PODate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="POMaterials" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TransactionStatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstWeight" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FirstWtDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SecondWeight" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SecondWtDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NetWeight" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Shift" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SHIFTDATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="WeighbridgeId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UseStoredTareWt" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlantCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CompanyCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FrontImage1" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FrontImage2" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="BackImage1" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="BackImage2" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TopImage1" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TopImage2" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="WeighingUnit" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RFIDCARDNO" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RFIDTAGUID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CARDISSUEDATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PRINT_TICKET" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TARETOLERANCESTATUS" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserClassifications" Member="UserClassifications">
+    <Type Name="UserClassification">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserType" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="MasterFileUpdation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MasterRecordDeletion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PendingRecordDeletion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TransactionDeletion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Configuration" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PasswordPolicy" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PasswordReset" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserCreation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GateEntry" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RFIDIssue" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Weighment" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DatabaseOperation" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TareToleranceApproval" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMachineWorkingParameters" Member="tblMachineWorkingParameters">
+    <Type Name="tblMachineWorkingParameter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlantCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IPPort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PortNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ModeOfComs" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StabilityNos" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StabilityRange" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ZeroInterlock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ZeroInterlockRange" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WeightInterlock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeightInterlockRange" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastStoredWeight" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TransactionNoPrefix" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TareCheck" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoredTare" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TareScheme" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TareWeightValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NetWeightLimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TicketPaperSize" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoggedUser" Member="LoggedUsers">
+    <Type Name="LoggedUser">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlantCodeID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MachineId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LoginUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LoginUserDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LogOutUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LogOutUserDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Logs" Member="Logs">
+    <Type Name="Log">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlantCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LogTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LogDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LogDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblSystemCheckedID" Member="tblSystemCheckedIDs">
+    <Type Name="tblSystemCheckedID">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WBID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PLANTID" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SYSTEMCHECKDATA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

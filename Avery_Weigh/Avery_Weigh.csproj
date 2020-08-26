@@ -1,0 +1,1629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0259E5A6-564E-4556-8E2D-9F8495ECBD30}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Avery_Weigh</RootNamespace>
+    <AssemblyName>Avery_Weigh</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Advantech.Adam, Version=8.2.6.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Advantech.Adam.dll</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Common, Version=8.2.6.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Advantech.Common.DLL</HintPath>
+    </Reference>
+    <Reference Include="Advantech.Protocol, Version=8.2.6.0, Culture=neutral, PublicKeyToken=c24039c75946be9c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Advantech.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.REALPLAYXLib">
+      <HintPath>..\..\..\avery software - all utility\LiveStreemimgWindowsForms\bin\Debug\AxInterop.REALPLAYXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.94.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.94.2\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DIOWebService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DIOWebService.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DropDownListChosen, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DropDownListChosen.1.0.2\lib\DropDownListChosen.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.3.0\lib\net45\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.7.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.7\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAPICodePack-Core.1.1.0.0\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAPICodePack-Shell.1.1.0.0\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSDKCS, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NetSDKCS.dll</HintPath>
+    </Reference>
+    <Reference Include="PlaySDKCS, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PlaySDKCS.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Base, Version=17.2450.0.49, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Compression.Base.17.2.0.49\lib\net45\Syncfusion.Compression.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=17.2450.0.49, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.17.2.0.49\lib\net45\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Base, Version=17.2450.0.49, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Pdf.WinForms.17.2.0.49\lib\net45\Syncfusion.Pdf.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Alpha_DisplayMaster\AddEdit.aspx" />
+    <Content Include="Alpha_DisplayMaster\Import.aspx" />
+    <Content Include="Alpha_DisplayMaster\List.aspx" />
+    <Content Include="Alpha_DisplayMaster\Search.aspx" />
+    <Content Include="AMC_Master.aspx" />
+    <Content Include="AveryService\WebService1.asmx" />
+    <Content Include="AVTOLSCH\Add.aspx" />
+    <Content Include="AVTOLSCH\List.aspx" />
+    <Content Include="Barrier_Master\AddEdit.aspx" />
+    <Content Include="Barrier_Master\Import.aspx" />
+    <Content Include="Barrier_Master\List.aspx" />
+    <Content Include="Barrier_Master\Search.aspx" />
+    <Content Include="Camera_Master\AddEdit.aspx" />
+    <Content Include="Camera_Master\Import.aspx" />
+    <Content Include="Camera_Master\List.aspx" />
+    <Content Include="Camera_Master\Search.aspx" />
+    <Content Include="Company_Master.aspx" />
+    <Content Include="ConfigurationMaster.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\select2.css" />
+    <Content Include="Content\select2.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\fonts.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="Database_Backup.aspx" />
+    <Content Include="DDL\Scripts\chosen.jquery.js" />
+    <Content Include="DDL\Scripts\jquery.min.js" />
+    <Content Include="DDL\Style\chosen.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="ErrorLogs.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="FieldNames\AddEdit.aspx" />
+    <Content Include="FieldNames\List.aspx" />
+    <Content Include="fonts\calibri.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GateEntryForm.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="fonts\calibri.eot" />
+    <Content Include="fonts\calibri.otf" />
+    <Content Include="fonts\calibri.ttf" />
+    <Content Include="fonts\calibri.woff" />
+    <Content Include="fonts\calibrib.zip" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="images\AMC\gold_amc.png" />
+    <Content Include="images\AMC\gold_amc_exp.png" />
+    <Content Include="images\AMC\gold_no_warrantee_no_guarantee.png" />
+    <Content Include="images\AMC\gold_no_warrantee_only_guarantee.png" />
+    <Content Include="images\AMC\gold_no_warrantee_yes_guarantee.png" />
+    <Content Include="images\AMC\gold_warranty_no.png" />
+    <Content Include="images\AMC\gold_warranty_yes.png" />
+    <Content Include="images\AMC\gold_yes_warrantee_no_guarantee.png" />
+    <Content Include="images\AMC\gold_yes_warrantee_yes_guarantee.png" />
+    <Content Include="images\AMC\New folder\gold_amc.png" />
+    <Content Include="images\AMC\New folder\gold_amc_exp.png" />
+    <Content Include="images\AMC\New folder\gold_no_warrantee_no_guarantee.png" />
+    <Content Include="images\AMC\New folder\gold_warranty_no.png" />
+    <Content Include="images\AMC\New folder\gold_warranty_yes.png" />
+    <Content Include="images\AMC\New folder\New Text Document.txt" />
+    <Content Include="images\AMC\New folder\platinum_amc.png" />
+    <Content Include="images\AMC\New folder\platinum_amc_exp.png" />
+    <Content Include="images\AMC\New folder\platinum_warranty_no.png" />
+    <Content Include="images\AMC\New folder\platinum_warranty_yes.png" />
+    <Content Include="images\AMC\New folder\silver_amc.png" />
+    <Content Include="images\AMC\New folder\silver_amc_exp.png" />
+    <Content Include="images\AMC\New folder\silver_warranty_yes.png" />
+    <Content Include="images\AMC\New folder\silver_warrant_no.png" />
+    <Content Include="images\AMC\New Text Document.txt" />
+    <Content Include="images\AMC\platinum_amc.png" />
+    <Content Include="images\AMC\platinum_amc_exp.png" />
+    <Content Include="images\AMC\platinum_no_warrantee_no_guarantee.png" />
+    <Content Include="images\AMC\platinum_no_warrantee_yes_guarantee.png" />
+    <Content Include="images\AMC\platinum_warranty_no.png" />
+    <Content Include="images\AMC\platinum_warranty_yes.png" />
+    <Content Include="images\AMC\platinum_yes_warrantee_no_guarantee.png" />
+    <Content Include="images\AMC\platinum_yes_warrantee_yes_guarantee.png" />
+    <Content Include="images\AMC\silver_amc.png" />
+    <Content Include="images\AMC\silver_amc_exp.png" />
+    <Content Include="images\AMC\silver_no_warrantee_no_guarantee.png" />
+    <Content Include="images\AMC\silver_no_warrantee_yes_guarantee.png" />
+    <Content Include="images\AMC\silver_warranty_yes.png" />
+    <Content Include="images\AMC\silver_warrant_no.png" />
+    <Content Include="images\AMC\silver_yes_warrantee_no_guarantee.png" />
+    <Content Include="images\AMC\silver_yes_warrantee_yes_guarantee.png" />
+    <Content Include="images\Avery-Weight-Tronix-Logo-login.png" />
+    <Content Include="images\Avery-Weight-Tronix-Logo.png" />
+    <Content Include="images\backtruck.jpg" />
+    <Content Include="images\close.png" />
+    <Content Include="images\close_hover.png" />
+    <Content Include="images\close_normal.png" />
+    <Content Include="images\companylogo\images.jpg" />
+    <Content Include="images\companylogo\logo.jpg" />
+    <Content Include="images\companylogo\Ticketheader.png" />
+    <Content Include="images\companylogo\yOUR COMPANY LOGO.jpg" />
+    <Content Include="images\contact\contact_disable.png" />
+    <Content Include="images\contact\contact_hover.png" />
+    <Content Include="images\contact\contact_normal.png" />
+    <Content Include="images\contact\contact_select.png" />
+    <Content Include="images\contact\info_disable.png" />
+    <Content Include="images\contact\info_hover.png" />
+    <Content Include="images\contact\info_normal.png" />
+    <Content Include="images\contact\info_select.png" />
+    <Content Include="images\contact\login_disable.png" />
+    <Content Include="images\contact\login_hover.png" />
+    <Content Include="images\contact\login_normal.png" />
+    <Content Include="images\contact\login_select.png" />
+    <Content Include="images\exit_fullscreen_hover.png" />
+    <Content Include="images\exit_fullscreen_normal.png" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\fronttruck.jpg" />
+    <Content Include="images\fullscreen_hover.png" />
+    <Content Include="images\fullscreen_normal.png" />
+    <Content Include="images\header.jpg" />
+    <Content Include="images\header1.png" />
+    <Content Include="images\header2.png" />
+    <Content Include="images\ic1.png" />
+    <Content Include="images\ic2.png" />
+    <Content Include="images\ic3.png" />
+    <Content Include="images\ic4.png" />
+    <Content Include="images\ic5.png" />
+    <Content Include="images\ic6.png" />
+    <Content Include="images\icon1.png" />
+    <Content Include="images\icon2.png" />
+    <Content Include="images\icon3.png" />
+    <Content Include="images\intellegence-left-logo.png" />
+    <Content Include="images\login\gold_yes_warrantee_yes_guarantee.png" />
+    <Content Include="images\login\login_black_fibre_bg.png" />
+    <Content Include="images\login\New folder\gold\gold_yes_warrantee_yes_guarantee.png" />
+    <Content Include="images\login\New folder\gold_yes_warrantee_yes_guarantee.png" />
+    <Content Include="images\login\New folder\gold_yes_warrantee_yes_guarantee1.png" />
+    <Content Include="images\login\wi_base_hover_rail.png" />
+    <Content Include="images\login\wi_base_normal_rail.png" />
+    <Content Include="images\login\wi_connect_hover_rail.png" />
+    <Content Include="images\login\wi_connect_normal_rail.png" />
+    <Content Include="images\login\wi_sense_hover_rail.png" />
+    <Content Include="images\login\wi_sense_normal_rail.png" />
+    <Content Include="images\login\wi_tag_hover_rail.png" />
+    <Content Include="images\login\wi_tag_normal_rail.png" />
+    <Content Include="images\login\wi_view_hover_rail.png" />
+    <Content Include="images\login\wi_view_normal_rail.png" />
+    <Content Include="images\login_hover.png" />
+    <Content Include="images\login_normal.png" />
+    <Content Include="images\login_steel_plate_bg.png" />
+    <Content Include="images\logo-bg.jpg" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\main_steel_bg_1px.png" />
+    <Content Include="images\masters\masters_button_disable.png" />
+    <Content Include="images\masters\masters_button_hover.png" />
+    <Content Include="images\masters\masters_button_normal.png" />
+    <Content Include="images\masters\masters_button_select.png" />
+    <Content Include="images\masters\vehicle_classification_disable.png" />
+    <Content Include="images\masters\vehicle_classification_hover.png" />
+    <Content Include="images\masters\vehicle_classification_normal.png" />
+    <Content Include="images\masters\vehicle_classification_select.png" />
+    <Content Include="images\masters_plate_bg.png" />
+    <Content Include="images\next_truck_disable.png" />
+    <Content Include="images\next_truck_hover.png" />
+    <Content Include="images\next_truck_normal.png" />
+    <Content Include="images\next_truck_select.png" />
+    <Content Include="images\pic1.jpg" />
+    <Content Include="images\pic2.jpg" />
+    <Content Include="images\pic3.jpg" />
+    <Content Include="images\searchicon.png" />
+    <Content Include="images\spacer.png" />
+    <Content Include="images\steel_plate_bg_screen.png" />
+    <Content Include="images\steel_plate_bg_search_screen.png" />
+    <Content Include="images\toptruck.jpg" />
+    <Content Include="images\type1\configure_disable.png" />
+    <Content Include="images\type1\configure_hover.png" />
+    <Content Include="images\type1\configure_normal.png" />
+    <Content Include="images\type1\configure_select.png" />
+    <Content Include="images\type1\dashboard_disable.png" />
+    <Content Include="images\type1\dashboard_hover.png" />
+    <Content Include="images\type1\dashboard_normal.png" />
+    <Content Include="images\type1\dashboard_select.png" />
+    <Content Include="images\type1\diagnostics_disable.png" />
+    <Content Include="images\type1\diagnostics_hover.png" />
+    <Content Include="images\type1\diagnostics_normal.png" />
+    <Content Include="images\type1\diagnostics_select.png" />
+    <Content Include="images\type1\masters_disable.png" />
+    <Content Include="images\type1\masters_hover.png" />
+    <Content Include="images\type1\masters_normal.png" />
+    <Content Include="images\type1\masters_select.png" />
+    <Content Include="images\type1\mode_disable.png" />
+    <Content Include="images\type1\mode_hover.png" />
+    <Content Include="images\type1\mode_normal.png" />
+    <Content Include="images\type1\mode_select.png" />
+    <Content Include="images\type1\modify_data_disable.png" />
+    <Content Include="images\type1\modify_data_hover.png" />
+    <Content Include="images\type1\modify_data_normal.png" />
+    <Content Include="images\type1\modify_data_select.png" />
+    <Content Include="images\type1\report_disable.png" />
+    <Content Include="images\type1\report_hover.png" />
+    <Content Include="images\type1\report_normal.png" />
+    <Content Include="images\type1\report_select.png" />
+    <Content Include="images\type1\service_disable.png" />
+    <Content Include="images\type1\service_hover.png" />
+    <Content Include="images\type1\service_normal - Copy.png" />
+    <Content Include="images\type1\service_normal.png" />
+    <Content Include="images\type1\service_select.png" />
+    <Content Include="images\type1\ticket_disable.png" />
+    <Content Include="images\type1\ticket_hover.png" />
+    <Content Include="images\type1\ticket_normal.png" />
+    <Content Include="images\type1\ticket_select.png" />
+    <Content Include="images\type1\weigh_disable.png" />
+    <Content Include="images\type1\weigh_hover.png" />
+    <Content Include="images\type1\weigh_normal.png" />
+    <Content Include="images\type1\weigh_select.png" />
+    <Content Include="images\type3\copy_disable.png" />
+    <Content Include="images\type3\copy_hover.png" />
+    <Content Include="images\type3\copy_normal.png" />
+    <Content Include="images\type3\copy_select.png" />
+    <Content Include="images\type3\email_disable.png" />
+    <Content Include="images\type3\email_hover.png" />
+    <Content Include="images\type3\email_normal.png" />
+    <Content Include="images\type3\email_select.png" />
+    <Content Include="images\type3\get_weight_disable.png" />
+    <Content Include="images\type3\get_weight_hover.png" />
+    <Content Include="images\type3\get_weight_normal.png" />
+    <Content Include="images\type3\get_weight_select.png" />
+    <Content Include="images\type3\next_page_disable.png" />
+    <Content Include="images\type3\next_page_hover.png" />
+    <Content Include="images\type3\next_page_normal.png" />
+    <Content Include="images\type3\next_page_select.png" />
+    <Content Include="images\type3\next_record_disable.png" />
+    <Content Include="images\type3\next_record_hover.png" />
+    <Content Include="images\type3\next_record_normal.png" />
+    <Content Include="images\type3\next_record_select.png" />
+    <Content Include="images\type3\paste_disable.png" />
+    <Content Include="images\type3\paste_hover.png" />
+    <Content Include="images\type3\paste_normal.png" />
+    <Content Include="images\type3\paste_select.png" />
+    <Content Include="images\type3\pause_disable.png" />
+    <Content Include="images\type3\pause_hover.png" />
+    <Content Include="images\type3\pause_normal.png" />
+    <Content Include="images\type3\pause_select.png" />
+    <Content Include="images\type3\previous_page_hover.png" />
+    <Content Include="images\type3\previous_page_normal.png" />
+    <Content Include="images\type3\previous_page_select.png" />
+    <Content Include="images\type3\previous_record_disable.png" />
+    <Content Include="images\type3\previous_record_hover.png" />
+    <Content Include="images\type3\previous_record_normal.png" />
+    <Content Include="images\type3\previous_record_select.png" />
+    <Content Include="images\type3\printer_disable.png" />
+    <Content Include="images\type3\printer_hover.png" />
+    <Content Include="images\type3\printer_normal.png" />
+    <Content Include="images\type3\printer_select.png" />
+    <Content Include="images\type3\refresh_disable.png" />
+    <Content Include="images\type3\refresh_hover.png" />
+    <Content Include="images\type3\refresh_normal.png" />
+    <Content Include="images\type3\refresh_select.png" />
+    <Content Include="images\type3\report_disable.png" />
+    <Content Include="images\type3\report_hover.png" />
+    <Content Include="images\type3\report_normal.png" />
+    <Content Include="images\type3\report_select.png" />
+    <Content Include="images\type3\send_disable.png" />
+    <Content Include="images\type3\send_hover.png" />
+    <Content Include="images\type3\send_normal.png" />
+    <Content Include="images\type3\send_select.png" />
+    <Content Include="images\type3\start_disable.png" />
+    <Content Include="images\type3\start_hover.png" />
+    <Content Include="images\type3\start_normal.png" />
+    <Content Include="images\type3\start_select.png" />
+    <Content Include="images\type3\stop_disable.png" />
+    <Content Include="images\type3\stop_hover.png" />
+    <Content Include="images\type3\stop_normal.png" />
+    <Content Include="images\type3\stop_select.png" />
+    <Content Include="images\type3\switch_disable.png" />
+    <Content Include="images\type3\switch_hover.png" />
+    <Content Include="images\type3\switch_normal.png" />
+    <Content Include="images\type3\switch_select.png" />
+    <Content Include="images\type3\test_disable.png" />
+    <Content Include="images\type3\test_hover.png" />
+    <Content Include="images\type3\test_normal.png" />
+    <Content Include="images\type3\test_select.png" />
+    <Content Include="images\type3\ticket_disable.png" />
+    <Content Include="images\type3\ticket_hover.png" />
+    <Content Include="images\type3\ticket_normal.png" />
+    <Content Include="images\type3\ticket_select.png" />
+    <Content Include="images\type3\view_all_list_disable.png" />
+    <Content Include="images\type3\view_all_list_hover.png" />
+    <Content Include="images\type3\view_all_list_normal.png" />
+    <Content Include="images\type3\view_all_list_select.png" />
+    <Content Include="images\type3\zero_platform_disable.png" />
+    <Content Include="images\type3\zero_platform_hover.png" />
+    <Content Include="images\type3\zero_platform_normal.png" />
+    <Content Include="images\type3\zero_platform_select.png" />
+    <Content Include="images\type4\add_new_hover.png" />
+    <Content Include="images\type4\add_new_normal.png" />
+    <Content Include="images\type4\add_new_select.png" />
+    <Content Include="images\type4\cancel_hover.png" />
+    <Content Include="images\type4\cancel_normal.png" />
+    <Content Include="images\type4\cancel_select.png" />
+    <Content Include="images\type4\delete_hover.png" />
+    <Content Include="images\type4\delete_normal.png" />
+    <Content Include="images\type4\delete_select.png" />
+    <Content Include="images\type4\edit_hover.png" />
+    <Content Include="images\type4\edit_normal.png" />
+    <Content Include="images\type4\edit_select.png" />
+    <Content Include="images\type4\export_hover.png" />
+    <Content Include="images\type4\export_normal.png" />
+    <Content Include="images\type4\export_select.png" />
+    <Content Include="images\type4\import_hover.png" />
+    <Content Include="images\type4\import_normal.png" />
+    <Content Include="images\type4\import_select.png" />
+    <Content Include="images\type4\print_hover.png" />
+    <Content Include="images\type4\print_normal.png" />
+    <Content Include="images\type4\print_select.png" />
+    <Content Include="images\type4\save_hover.png" />
+    <Content Include="images\type4\save_normal.png" />
+    <Content Include="images\type4\save_select.png" />
+    <Content Include="images\type4\search_hover.png" />
+    <Content Include="images\type4\search_normal.png" />
+    <Content Include="images\type4\search_select.png" />
+    <Content Include="images\type4\view_hover.png" />
+    <Content Include="images\type4\view_normal.png" />
+    <Content Include="images\type4\view_select.png" />
+    <Content Include="images\TYPE5\Thumbs.db" />
+    <Content Include="images\TYPE5\TYPE5B\Thumbs.db" />
+    <Content Include="images\TYPE5\TYPE5B\wi_base_disable_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_base_hover_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_base_normal_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_base_select_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_connect_disable_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_connect_hover_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_connect_normal_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_connect_select_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_sense_disable_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_sense_hover_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_sense_normal_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_sense_select_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_tag_disable_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_tag_hover_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_tag_normal_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_tag_select_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_view_disable_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_view_hover_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_view_normal_rail.png" />
+    <Content Include="images\TYPE5\TYPE5B\wi_view_select_rail.png" />
+    <Content Include="images\TYPE5\wi_axl_disable.png" />
+    <Content Include="images\TYPE5\wi_axl_hover.png" />
+    <Content Include="images\TYPE5\wi_axl_normal.png" />
+    <Content Include="images\TYPE5\wi_axl_select.png" />
+    <Content Include="images\TYPE5\wi_base_disable.png" />
+    <Content Include="images\TYPE5\wi_base_hover.png" />
+    <Content Include="images\TYPE5\wi_base_normal.png" />
+    <Content Include="images\TYPE5\wi_base_select.png" />
+    <Content Include="images\TYPE5\wi_connect_disable.png" />
+    <Content Include="images\TYPE5\wi_connect_hover.png" />
+    <Content Include="images\TYPE5\wi_connect_normal.png" />
+    <Content Include="images\TYPE5\wi_connect_select.png" />
+    <Content Include="images\TYPE5\wi_sense_disable.png" />
+    <Content Include="images\TYPE5\wi_sense_hover.png" />
+    <Content Include="images\TYPE5\wi_sense_normal.png" />
+    <Content Include="images\TYPE5\wi_sense_select.png" />
+    <Content Include="images\TYPE5\wi_tag_disable.png" />
+    <Content Include="images\TYPE5\wi_tag_hover.png" />
+    <Content Include="images\TYPE5\wi_tag_normal.png" />
+    <Content Include="images\TYPE5\wi_tag_select.png" />
+    <Content Include="images\TYPE5\wi_tms_disable.png" />
+    <Content Include="images\TYPE5\wi_tms_hover.png" />
+    <Content Include="images\TYPE5\wi_tms_normal.png" />
+    <Content Include="images\TYPE5\wi_tms_select.png" />
+    <Content Include="images\TYPE5\wi_uws_disable.png" />
+    <Content Include="images\TYPE5\wi_uws_hover.png" />
+    <Content Include="images\TYPE5\wi_uws_normal.png" />
+    <Content Include="images\TYPE5\wi_uws_select.png" />
+    <Content Include="images\TYPE5\wi_view_disable.png" />
+    <Content Include="images\TYPE5\wi_view_hover.png" />
+    <Content Include="images\TYPE5\wi_view_normal.png" />
+    <Content Include="images\TYPE5\wi_view_select.png" />
+    <Content Include="images\type6\barrier_close_green.png" />
+    <Content Include="images\type6\barrier_close_grey.png" />
+    <Content Include="images\type6\barrier_close_red.png" />
+    <Content Include="images\type6\barrier_open_green.png" />
+    <Content Include="images\type6\barrier_open_grey.png" />
+    <Content Include="images\type6\barrier_open_red.png" />
+    <Content Include="images\type6\camera_green.png" />
+    <Content Include="images\type6\camera_grey.png" />
+    <Content Include="images\type6\camera_red.png" />
+    <Content Include="images\type6\reader_green.png" />
+    <Content Include="images\type6\reader_grey.png" />
+    <Content Include="images\type6\reader_red.png" />
+    <Content Include="images\type6\rfid_green.png" />
+    <Content Include="images\type6\rfid_grey.png" />
+    <Content Include="images\type6\rfid_red.png" />
+    <Content Include="images\type6\server_green.png" />
+    <Content Include="images\type6\server_grey.png" />
+    <Content Include="images\type6\server_red.png" />
+    <Content Include="images\ui-icons_444444_256x240.png" />
+    <Content Include="images\Weigh_black_fibre_bg.png" />
+    <Content Include="images\zoom.jpg" />
+    <Content Include="js\jquery-1.12.4.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="Machine\AddEdit.aspx" />
+    <Content Include="Machine\Import.aspx" />
+    <Content Include="Machine\List.aspx" />
+    <Content Include="Machine\Search.aspx" />
+    <Content Include="DashboardMaster.aspx" />
+    <Content Include="ManageUsers\Import.aspx" />
+    <Content Include="ManageUsers\Search.aspx" />
+    <Content Include="Material\Import.aspx" />
+    <Content Include="Material\Search.aspx" />
+    <Content Include="Material_Classification\Import.aspx" />
+    <Content Include="Material_Classification\Search.aspx" />
+    <Content Include="Packing_Master\Import.aspx" />
+    <Content Include="Packing_Master\Search.aspx" />
+    <Content Include="PlantImport.aspx" />
+    <Content Include="PlantSearch.aspx" />
+    <Content Include="Records\Pending\AddEdit.aspx" />
+    <Content Include="Records\Pending\List.aspx" />
+    <Content Include="Records\Transactions\AddEdit.aspx" />
+    <Content Include="Records\Transactions\List.aspx" />
+    <Content Include="RePrintTicket.aspx" />
+    <Content Include="rptDateWise.aspx" />
+    <Content Include="Scripts\averyJs\bootstrap.min.js" />
+    <Content Include="Scripts\averyJs\chosen.jquery.min.js" />
+    <Content Include="Scripts\averyJs\chosen.min.css" />
+    <Content Include="Scripts\averyJs\chosen1.jquery.min.js" />
+    <Content Include="Scripts\averyJs\jquery-1.12.4.js" />
+    <Content Include="Scripts\averyJs\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\averyJs\jquery-ui.css" />
+    <Content Include="Scripts\averyJs\jquery-ui.js" />
+    <Content Include="Scripts\averyJs\jquery.dataTables.min.css" />
+    <Content Include="Scripts\averyJs\jquery.dataTables.min.js" />
+    <Content Include="Scripts\averyJs\jquery.min.js" />
+    <Content Include="Scripts\averyJs\jquery1.min.js" />
+    <Content Include="Scripts\averyJs\toastr.min.js" />
+    <Content Include="SensorMaster\AddEdit.aspx" />
+    <Content Include="SensorMaster\Import.aspx" />
+    <Content Include="SensorMaster\List.aspx" />
+    <Content Include="SensorMaster\Search.aspx" />
+    <Content Include="Service_Master\AddEdit.aspx" />
+    <Content Include="Service_Master\Import.aspx" />
+    <Content Include="Service_Master\List.aspx" />
+    <Content Include="Service_Master\Search.aspx" />
+    <Content Include="Shift_Master.aspx" />
+    <Content Include="Supplier\Import.aspx" />
+    <Content Include="Supplier\Search.aspx" />
+    <Content Include="Ticketheader.png" />
+    <Content Include="ToleranceApproval\AddEdit.aspx" />
+    <Content Include="ToleranceApproval\List.aspx" />
+    <Content Include="Transporter\Import.aspx" />
+    <Content Include="Transporter\Search.aspx" />
+    <Content Include="Truck_Master\Import.aspx" />
+    <Content Include="Truck_Master\Search.aspx" />
+    <Content Include="UsersClassification\Import.aspx" />
+    <Content Include="UsersClassification\Search.aspx" />
+    <Content Include="VC\Import.aspx" />
+    <Content Include="VC\Search.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WeightMachinMaster\AddEdit.aspx" />
+    <Content Include="WeightMachinMaster\Import.aspx" />
+    <Content Include="WeightMachinMaster\List.aspx" />
+    <Content Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WeightMachinMaster\Search.aspx" />
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <Content Include="DataClasses2.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="DataClasses2.dbml.layout">
+      <DependentUpon>DataClasses2.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\Login.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="ManageMasters.aspx" />
+    <Content Include="ManageServices.aspx" />
+    <Content Include="ManageUsers\AddEdit.aspx" />
+    <Content Include="ManageUsers\List.aspx" />
+    <Content Include="Manual_Weighment.aspx" />
+    <Content Include="Material\AddEdit.aspx" />
+    <Content Include="Material\List.aspx" />
+    <Content Include="Material_Classification\AddEdit.aspx" />
+    <Content Include="Material_Classification\List.aspx" />
+    <Content Include="Packing_Master\AddEdit.aspx" />
+    <Content Include="Packing_Master\PackingList.aspx" />
+    <Content Include="PlantInfo.aspx" />
+    <Content Include="PlantList.aspx" />
+    <Content Include="Scripts\date.format.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\select2.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="services\EquipmentList.aspx" />
+    <Content Include="services\PlantSettings.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ServiceMaster.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="Supplier\AddEdit.aspx" />
+    <Content Include="Supplier\List.aspx" />
+    <Content Include="Transporter\AddEdit.aspx" />
+    <Content Include="Transporter\List.aspx" />
+    <Content Include="Truck_Master\AddEdit.aspx" />
+    <Content Include="Truck_Master\List.aspx" />
+    <Content Include="UsersClassification\AddEdit.aspx" />
+    <Content Include="UsersClassification\List.aspx" />
+    <Content Include="VC\Add.aspx" />
+    <Content Include="VC\List.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="View\Header.ascx" />
+    <Content Include="View\UserMenu.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alpha_DisplayMaster\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alpha_DisplayMaster\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alpha_DisplayMaster\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alpha_DisplayMaster\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alpha_DisplayMaster\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alpha_DisplayMaster\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alpha_DisplayMaster\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alpha_DisplayMaster\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AMC_Master.aspx.cs">
+      <DependentUpon>AMC_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AMC_Master.aspx.designer.cs">
+      <DependentUpon>AMC_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="AveryService\WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AVTOLSCH\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AVTOLSCH\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AVTOLSCH\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AVTOLSCH\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Barrier_Master\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Barrier_Master\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Barrier_Master\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Barrier_Master\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Barrier_Master\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Barrier_Master\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Barrier_Master\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Barrier_Master\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bitmap.cs" />
+    <Compile Include="Camera_Master\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Camera_Master\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Camera_Master\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Camera_Master\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Camera_Master\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Camera_Master\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Camera_Master\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Camera_Master\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Master.aspx.cs">
+      <DependentUpon>Company_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company_Master.aspx.designer.cs">
+      <DependentUpon>Company_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationMaster.aspx.cs">
+      <DependentUpon>ConfigurationMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfigurationMaster.aspx.designer.cs">
+      <DependentUpon>ConfigurationMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Database_Backup.aspx.cs">
+      <DependentUpon>Database_Backup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Database_Backup.aspx.designer.cs">
+      <DependentUpon>Database_Backup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses2.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses2.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLogs.aspx.cs">
+      <DependentUpon>ErrorLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorLogs.aspx.designer.cs">
+      <DependentUpon>ErrorLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FieldNames\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FieldNames\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FieldNames\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FieldNames\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GateEntryForm.aspx.cs">
+      <DependentUpon>GateEntryForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GateEntryForm.aspx.designer.cs">
+      <DependentUpon>GateEntryForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Machine\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Machine\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Machine\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Machine\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Machine\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Machine\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Machine\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Machine\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardMaster.aspx.cs">
+      <DependentUpon>DashboardMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashboardMaster.aspx.designer.cs">
+      <DependentUpon>DashboardMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMasters.aspx.cs">
+      <DependentUpon>ManageMasters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageMasters.aspx.designer.cs">
+      <DependentUpon>ManageMasters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageServices.aspx.cs">
+      <DependentUpon>ManageServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageServices.aspx.designer.cs">
+      <DependentUpon>ManageServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageUsers\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageUsers\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageUsers\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageUsers\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manual_Weighment.aspx.cs">
+      <DependentUpon>Manual_Weighment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manual_Weighment.aspx.designer.cs">
+      <DependentUpon>Manual_Weighment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Material\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Material\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Material\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Material\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Material\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Material\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Material\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Material\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Material_Classification\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Material_Classification\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Material_Classification\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Material_Classification\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Material_Classification\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Material_Classification\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Material_Classification\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Material_Classification\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DynamicFieldModel.cs" />
+    <Compile Include="Model\Model_AlphaDisplayMaster.cs" />
+    <Compile Include="Model\Model_BarrierMaster.cs" />
+    <Compile Include="Model\Model_CameraMaster.cs" />
+    <Compile Include="Model\Model_MachineParameters.cs" />
+    <Compile Include="Model\Model_ManualWeight.cs" />
+    <Compile Include="Model\Model_MaterialClassification.cs" />
+    <Compile Include="Model\Model_Materials.cs" />
+    <Compile Include="Model\Model_Packing.cs" />
+    <Compile Include="Model\Model_PlantMaster.cs" />
+    <Compile Include="Model\Model_Records.cs" />
+    <Compile Include="Model\Model_Supplier.cs" />
+    <Compile Include="Model\Model_SystemLog.cs" />
+    <Compile Include="Model\Model_Transporter.cs" />
+    <Compile Include="Model\Model_TruckMaster.cs" />
+    <Compile Include="Model\Model_UserClassification.cs" />
+    <Compile Include="Model\Model_UserMasters.cs" />
+    <Compile Include="Model\Model_VehicleClassification.cs" />
+    <Compile Include="Model\Model_WeightMachinMaster.cs" />
+    <Compile Include="Model\Mode_transactionWeight.cs" />
+    <Compile Include="Model\Ticket.cs" />
+    <Compile Include="Packing_Master\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Packing_Master\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Packing_Master\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Packing_Master\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Packing_Master\PackingList.aspx.cs">
+      <DependentUpon>PackingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Packing_Master\PackingList.aspx.designer.cs">
+      <DependentUpon>PackingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Packing_Master\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Packing_Master\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlantImport.aspx.cs">
+      <DependentUpon>PlantImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantImport.aspx.designer.cs">
+      <DependentUpon>PlantImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlantInfo.aspx.cs">
+      <DependentUpon>PlantInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantInfo.aspx.designer.cs">
+      <DependentUpon>PlantInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlantList.aspx.cs">
+      <DependentUpon>PlantList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantList.aspx.designer.cs">
+      <DependentUpon>PlantList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlantSearch.aspx.cs">
+      <DependentUpon>PlantSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantSearch.aspx.designer.cs">
+      <DependentUpon>PlantSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\Pending\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Records\Pending\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\Pending\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Records\Pending\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\Transactions\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Records\Transactions\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Records\Transactions\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Records\Transactions\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\AlphaDisplayRepository.cs" />
+    <Compile Include="Repository\BarrierMasterRepository.cs" />
+    <Compile Include="Repository\CameraMasterRepository.cs" />
+    <Compile Include="Repository\DynamicFieldRepository.cs" />
+    <Compile Include="Repository\GateEntryRepository.cs" />
+    <Compile Include="Repository\GlobalMethod.cs" />
+    <Compile Include="Repository\MachineParametersRepository.cs" />
+    <Compile Include="Repository\MaterialClassificationRepository.cs" />
+    <Compile Include="Repository\MaterialRepository.cs" />
+    <Compile Include="Repository\Model_TareToletrance.cs" />
+    <Compile Include="Repository\PackingRepository.cs" />
+    <Compile Include="Repository\PlantmasterRepository.cs" />
+    <Compile Include="Repository\RegexRepository.cs" />
+    <Compile Include="Repository\SensorMasterRepository.cs" />
+    <Compile Include="Repository\ServiceMasterRepository.cs" />
+    <Compile Include="Repository\SupplierRepository.cs" />
+    <Compile Include="Repository\SystemLogRepository.cs" />
+    <Compile Include="Repository\TareToleranceRepository.cs" />
+    <Compile Include="Repository\TransactionRepository.cs" />
+    <Compile Include="Repository\TransporterRepository.cs" />
+    <Compile Include="Repository\TruckMasterRepository.cs" />
+    <Compile Include="Repository\UserClassificationRepository.cs" />
+    <Compile Include="Repository\UserMasterRepository.cs" />
+    <Compile Include="Repository\UserWeightMachineMasterRepository.cs" />
+    <Compile Include="Repository\VehicleClassificationRepository.cs" />
+    <Compile Include="Repository\WeightMachinMasterRepository.cs" />
+    <Compile Include="RePrintTicket.aspx.cs">
+      <DependentUpon>RePrintTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RePrintTicket.aspx.designer.cs">
+      <DependentUpon>RePrintTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rptDateWise.aspx.cs">
+      <DependentUpon>rptDateWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rptDateWise.aspx.designer.cs">
+      <DependentUpon>rptDateWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensorMaster\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SensorMaster\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensorMaster\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SensorMaster\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensorMaster\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SensorMaster\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SensorMaster\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SensorMaster\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services\EquipmentList.aspx.cs">
+      <DependentUpon>EquipmentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services\EquipmentList.aspx.designer.cs">
+      <DependentUpon>EquipmentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services\PlantSettings.aspx.cs">
+      <DependentUpon>PlantSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services\PlantSettings.aspx.designer.cs">
+      <DependentUpon>PlantSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceMaster.aspx.cs">
+      <DependentUpon>ServiceMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServiceMaster.aspx.designer.cs">
+      <DependentUpon>ServiceMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Master\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service_Master\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Master\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service_Master\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Master\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service_Master\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Master\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Service_Master\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shift_Master.aspx.cs">
+      <DependentUpon>Shift_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shift_Master.aspx.designer.cs">
+      <DependentUpon>Shift_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplier\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplier\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplier\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Supplier\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tblMaterial.cs" />
+    <Compile Include="ToleranceApproval\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ToleranceApproval\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ToleranceApproval\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ToleranceApproval\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transporter\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transporter\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transporter\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transporter\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transporter\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transporter\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Transporter\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transporter\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truck_Master\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truck_Master\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truck_Master\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truck_Master\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truck_Master\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truck_Master\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Truck_Master\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Truck_Master\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersClassification\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersClassification\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersClassification\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersClassification\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersClassification\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersClassification\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersClassification\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersClassification\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VC\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VC\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VC\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VC\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VC\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VC\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VC\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VC\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserMenu.ascx.cs">
+      <DependentUpon>UserMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\UserMenu.ascx.designer.cs">
+      <DependentUpon>UserMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeightMachinMaster\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeightMachinMaster\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeightMachinMaster\Import.aspx.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeightMachinMaster\Import.aspx.designer.cs">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeightMachinMaster\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeightMachinMaster\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeightMachinMaster\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeightMachinMaster\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="DatabaseBackup\" />
+    <Folder Include="Pdfs\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50775</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50776/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

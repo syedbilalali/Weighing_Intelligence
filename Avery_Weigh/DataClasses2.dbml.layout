@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses2">
+  <DataContextMoniker Name="/DataClasses2DataContext" />
+  <nestedChildShapes>
+    <classShape Id="159cd3ce-fc09-4fc0-9974-d0bda48b294e" absoluteBounds="2, 0.5, 2, 6.1938297526041657">
+      <DataClassMoniker Name="/DataClasses2DataContext/tblRFIDCARDDATA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf2ba1c1-bf1a-43a8-b2c3-ecbf30564713" absoluteBounds="2.0149999999999997, 0.96, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
